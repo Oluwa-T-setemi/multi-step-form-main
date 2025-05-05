@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <title>STEP FORM</title>
+</head>
+<body class="w-[100%] h-[100vh] bg-blue-100 md:flex block md:items-center md:justify-center">
+  <div class="md:w-3/5 h-3/4 md:bg-white rounded-lg md:flex block md:p-3">
+
+    <div class="md:h-full h-[40%] md:w-1/3 bg-[url(assets/images/bg-sidebar-mobile.svg)]  md:bg-[url(assets/images/bg-sidebar-desktop.svg)] bg-cover bg-center md:rounded-md p-4 flex  md:flex-col items-center md:items-start md:justify-start items-start justify-center relative">
+
+      <div class="flex md:w-3/4 items-center font-[Ubuntu]">
+        <div class="w-[20px] h-[20px] p-4 rounded-full flex items-center justify-center my-3 border border-white text-blue-950 mx-2 bg-blue-300" id="step-one">
+          <p>1</p>
+        </div>
+        <div class="md:flex hidden flex-col justify-center leading-none text-white my-3" id="step1">
+          <p class="text-xs">STEP 1</p>
+          <p  class="text-sm font-bold">YOUR INFO</p>
+        </div>
+      </div>
+
+      <div class="flex md:w-3/4 items-center font-[Ubuntu]">
+        <div class="w-[20px] h-[20px] p-4 rounded-full flex items-center justify-center my-3 border border-white text-white mx-2" id="step-two">
+          <p>2</p>
+        </div>
+        <div class="md:flex hidden flex-col justify-center leading-none text-white my-3" id="step2">
+          <p class="text-xs">STEP 2</p>
+          <p  class="text-sm font-bold">SELECT PLAN</p>
+        </div>
+      </div>
+
+      <div class="flex md:w-3/4 items-center font-[Ubuntu]">
+        <div class="w-[20px] h-[20px] p-4 rounded-full flex items-center justify-center my-3 border border-white text-white mx-2" id="step-three">
+          <p>3</p>
+        </div>
+        <div class="md:flex hidden flex-col justify-center leading-none text-white my-3" id="step3">
+          <p class="text-xs">STEP 3</p>
+          <p  class="text-sm font-bold">ADD-ONS</p>
+        </div>
+      </div>
+
+      <div class="flex md:w-3/4 items-center font-[Ubuntu]">
+        <div class="w-[20px] h-[20px] p-4 rounded-full flex items-center justify-center my-3 border border-white text-white mx-2" id="step-four">
+          <p>4</p>
+        </div>
+        <div class="md:flex hidden flex-col justify-center leading-none text-white my-3" id="step4">
+          <p class="text-xs">STEP 4</p>
+          <p  class="text-sm font-bold">SUMMARY</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class=" md:w-[50%] w-[90%] md:relative fixed bg-white md:mx-auto left-[5%] md:left-[0%] md:pt-10 md:px-0 px-5 py-8 rounded-md top-27 md:top-0">
+
+      <div class="font-[Ubuntu] h-4/4" id="your-info">
+        <h1 class="text-2xl font-bold text-blue-950">Personal info</h1>
+        <p class="text-xs text-gray-500 mb-6">Please provide your name, email address, and phone number.</p>
+        <label class="text-blue-900 text-sm" for="Name">Name</label>
+        <input type="text" placeholder="e.g.Stephen King" class=" bg-white block w-4/4 p-2 rounded-sm border border-gray-500 font-[Ubuntu] mb-3" >
+        <label class="text-blue-900 text-sm" for="email">Email Address</label>
+        <input type="email" placeholder="e.g.stephenking@gmail.com" class=" bg-white block w-4/4 p-2 rounded-sm border border-gray-500 font-[Ubuntu] mb-3">
+        <div class="flex justify-between items-center">
+          <label class="text-blue-900 text-sm" for="Phone Number">Phone Number</label>
+          <p class="text-xs text-red-600 hidden" id="warning-message">This field is required</p>
+        </div>
+        <input type="tel" placeholder="e.g.+1 234 567 890" class=" bg-white block w-4/4 p-2 rounded-sm border border-gray-500 font-[Ubuntu]" id="phone-number">
+        <div class="flex w-full justify-end md:mt-15 md:relative fixed top-[88%] md:top-0 md:px-0 py-5 px-5 right-0 bg-white md:bg-transparent">
+          <button class=" cursor-pointer font-[Ubuntu] bg-blue-950 p-2 px-4 rounded-md text-white hover:bg-purple-600" id="btn-one">Next Step</button>
+        </div>
+      </div>
+
+      <div class="font-[Ubuntu] h-4/4 hidden" id="select-plan">
+        <h1 class="text-2xl font-bold text-blue-950 mb-1">Select your plan</h1>
+        <p class="text-xs text-gray-400 mb-6">You have the option of monthly or yearly billing.</p>
+
+        <div class="w-full md:flex md:flex-row flex-col  md:justify-between mb-4 gap-2 h-2/5">
+          <div class="md:w-1/3 my-3 md:my-0 w-full rounded-md border-2 border-gray-300  flex md:flex-col flex-row md:justify-between h-full py-3 px-2 hover:border-purple-700 hover:border-2" id="arcade-plan">
+            <img src="/assets/images/icon-arcade.svg" alt="" class="w-[40px] h-[40px]">
+            <div class="md: ml-0 ml-4">
+              <p class="text-md text-blue-950 font-medium">Arcade</p>
+              <p class="text-xs text-gray-400 hidden yearly-amount">$90/yr</p>
+              <p class="text-xs text-gray-400 monthly-amount">$9/mo</p>
+              <p class="text-sm text-blue-950 hidden time-free" >2 months free</p>
+            </div>
+          </div>
+
+          <div class="md:w-1/3 my-3 md:my-0 w-full rounded-md border-2 border-gray-300  flex md:flex-col flex-row md:justify-between h-full py-3 px-2  hover:border-purple-700 hover:border-2" id="advanced-plan">
+            <img src="/assets/images/icon-advanced.svg" alt="" class="w-[40px] h-[40px]">
+            <div class="md: ml-0 ml-4">
+              <p class="text-md text-blue-950 font-medium">Advanced</p>
+              <p class="text-xs text-gray-400 hidden yearly-amount">$120/yr</p>
+              <p class="text-xs text-gray-400 monthly-amount">$12/mo</p>
+              <p class="text-sm text-blue-950 hidden time-free" >2 months free</p>
+            </div>
+          </div>
+
+          <div class="md:w-1/3 my-3 md:my-0 w-full rounded-md border-2 border-gray-300  flex md:flex-col flex-row md:justify-between h-full py-3 px-2  hover:border-purple-700 hover:border-2" id="pro-plan">
+            <img src="/assets/images/icon-pro.svg" alt="" class="w-[40px] h-[40px]">
+            <div class="md: ml-0 ml-4">
+              <p class="text-md text-blue-950 font-medium">Pro</p>
+              <p class="text-xs text-gray-400 hidden yearly-amount">$150/yr</p>
+              <p class="text-xs text-gray-400 monthly-amount">$15/mo</p>
+              <p class="text-sm text-blue-950 hidden time-free" >2 months free</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center w-full p-2 bg-blue-50">
+          <p class="text-sm text-blue-950">Monthly</p>
+          <label class="relative inline-block">
+            <input type="checkbox" class="sr-only peer" id="toggle">
+            <div class="h-5 w-10 rounded-full border-gray-600 bg-blue-950 
+                        after:content-[''] after:absolute after:start-[15px] after:top-0.5 
+                        after:h-4 after:w-4 after:rounded-full after:border after:border-gray-300 
+                        after:bg-white after:transition-all 
+                        peer-checked:bg-blue-950 peer-checked:after:translate-x-full 
+                        peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full mx-2">
+            </div>
+          </label>
+          <p class="text-sm text-blue-950">Yearly</p>
+        </div>
+
+        <div class="flex w-full justify-between md:mt-15 md:relative fixed top-[88%] md:top-0 md:px-0 py-5 px-5 right-0 bg-white md:bg-transparent">
+          <button class=" cursor-pointer text-gray-400 hover:text-blue-950" id="back-one">Go Back</button>
+          <button class=" cursor-pointer font-[Ubuntu] bg-blue-950 p-2 px-4 rounded-md text-white hover:bg-purple-600" id="btn-two">Next Step</button>
+        </div>
+
+      </div>
+
+      <div class="font-[Ubuntu] h-4/4 hidden" id="add-ons">
+        <h1 class="text-2xl font-bold text-blue-950">Pick add-ons</h1>
+        <p class="text-xs text-gray-500 mb-6">Add-ons help enhance your gaming experience.</p>
+
+        <div class="w-full h-2/4 flex flex-col justify-between mb-4 gap-2 gap-2 ">
+
+          <div class="h-1/3 flex justify-between items-center p-2 border-2 border-gray-300 rounded-md" id="online-service">
+            <div class="flex justify-center items-center">
+              <input type="checkbox" class="accent-purple-700 w-[25px] h-[25px] mx-4" id="online-service-checkbox">
+              <div class="flex flex-col justify-between">
+                <p class="text-sm font-medium text-blue-950">Online service</p>
+                <p class="text-xs text-gray-400">Access to multiplayer games</p>
+              </div>
+            </div>
+            <p class="text-sm text-purple-700 online-service-amount">+$1/mo</p>
+          </div>
+
+          <div class="h-1/3 flex justify-between items-center p-2 border-2 border-gray-300 rounded-md" id="larger-storage">
+            <div class="flex justify-center items-center">
+              <input type="checkbox" class="accent-purple-700 w-[25px] h-[25px] mx-4" id="larger-storage-checkbox">
+              <div class="flex flex-col justify-between">
+                <p class="text-sm font-medium text-blue-950">Larger Storage</p>
+                <p class="text-xs text-gray-400">Extra 1TB of cloud save</p>
+              </div>
+            </div>
+            <p class="text-sm text-purple-700 larger-storage-amount">+$2/mo</p>
+          </div>
+
+          <div class="h-1/3 flex justify-between items-center p-2 border-2 border-gray-300 rounded-md" id="custom-profile">
+            <div class="flex justify-center items-center">
+              <input type="checkbox" class="accent-purple-700 w-[25px] h-[25px] mx-4" id="custom-profile-checkbox">
+              <div class="flex flex-col justify-between">
+                <p class="text-sm font-medium text-blue-950">Customizable profile</p>
+                <p class="text-xs text-gray-400">Custom theme on your profile</p>
+              </div>
+            </div>
+            <p class="text-sm text-purple-700 custom-profile-amount">+$2/mo</p>
+          </div>
+        </div>
+
+        <div class="flex w-full justify-between md:mt-20 md:relative fixed top-[88%] md:top-0 md:px-0 py-5 px-5 right-0 bg-white md:bg-transparent">
+          <button class=" cursor-pointer text-gray-400 hover:text-blue-950" id="back-two">Go Back</button>
+          <button class=" cursor-pointer font-[Ubuntu] bg-blue-950 p-2 px-4 rounded-md text-white hover:bg-purple-600" id="btn-three" >Next Step</button>
+        </div>
+
+      </div>
+
+      <div class="font-[Ubuntu] h-4/4 hidden" id="summary">
+        <h1 class="text-2xl font-bold text-blue-950">Finishing up</h1>
+        <p class="text-xs text-gray-500 mb-6">Double-check everything looks OK before confirming.</p>
+
+        <div class="w-full h-2/5 rounded-md p-2 flex flex-col bg-blue-50">
+
+          <div class="h-1/2 w-full flex justify-between items-center p-2 border-b-2 border-gray-300">
+            <div>
+              <p class="text-sm text-blue-950 font-bold"><span id="span-plan">Arcade</span> (<span id="span-text">Monthly</span>)</p>
+              <p class="text-xs underline decoration-2 text-gray-400 hover:text-purple-700 cursor-pointer" id="change">Change</p>
+            </div>
+            <p class="text-sm text-blue-950 font-bold" id="plan-price">$9/mo</p>
+          </div>
+
+          <div class="h-1/2 w-full flex justify-between items-center p-2">
+            <div>
+              <p class="text-xs text-gray-400 mb-3 hidden" id="online-service-text">Online service</p>
+              <p class="text-xs text-gray-400 mb-3 hidden" id="larger-storage-text">Larger storage</p>
+              <p class="text-xs text-gray-400 hidden" id="custom-profile-text">Customizable Profile</p>
+            </div>
+
+            <div>
+              <p class="text-xs text-blue-950 font-medium mb-3 online-service-price"></p>
+              <p class="text-xs text-blue-950 font-medium mb-3 larger-storage-price"></p>
+              <p class="text-xs text-blue-950 font-medium custom-profile-price"></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="w-full px-2 flex justify-between items-center mt-4">
+          <p class="text-xs text-gray-400">Total (<span id="total-text">per month</span>)</p>
+          <p class="text-md text-violet-700 font-bold total-amount">$0/mo</p>
+        </div>
+
+
+        <div class="flex w-full justify-between md:mt-20 md:relative fixed top-[88%] md:top-0 md:px-0 py-5 px-5 right-0 bg-white md:bg-transparent">
+          <button class=" cursor-pointer text-gray-400 hover:text-blue-950" id="back-three">Go Back</button>
+          <button class=" cursor-pointer font-[Ubuntu]  p-2 px-4 rounded-md text-white bg-violet-700" id="confirm-btn">Confirm</button>
+        </div>
+      </div>
+
+      <div class="font-[Ubuntu] md:h-4/4 h-[400px] flex flex-col items-center justify-center text-center hidden" id="thank-you">
+        <img src="/assets/images/icon-thank-you.svg" alt="" class="my-3">
+        <h1 class="text-2xl text-blue-950 font-bold my-2">Thank you!</h1>
+        <p class="text-[16px] text-gray-400">Thanks for confirming your subscription! We hope you have fun using our platform. if you ever need support, please feel free to email us at support@steezygaming.</p>
+      </div>
+
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
