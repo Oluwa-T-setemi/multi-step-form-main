@@ -32,6 +32,8 @@ const billingToggle = document.querySelector("#toggle");
 const timeFree = document.querySelectorAll(".time-free");
 const monthlyAmount = document.querySelectorAll(".monthly-amount");
 const yearlyAmount = document.querySelectorAll(".yearly-amount");
+const monthlyText = document.querySelector("#monthly-text");
+const yearlyText = document.querySelector("#yearly-text");
 
 // Addons and summary details
 const onlineService = document.querySelector("#online-service");
@@ -194,6 +196,10 @@ billingToggle.addEventListener("change", function () {
         el.classList.toggle("block", !billingToggle.checked);
     });
 
+    monthlyText.classList.toggle("text-gray-400", billingToggle.checked);
+    yearlyText.classList.toggle("text-gray-400", !billingToggle.checked);
+    monthlyText.classList.toggle("text-blue-950", !billingToggle.checked);
+    yearlyText.classList.toggle("text-blue-950", billingToggle.checked);
     totalText.innerText = billingToggle.checked ? "per year" : "per month";
     spanText.innerText = billingToggle.checked ? "Yearly" : "Monthly";
 
