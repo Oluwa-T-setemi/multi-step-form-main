@@ -199,7 +199,6 @@ billingToggle.addEventListener("change", function () {
     monthlyText.classList.toggle("text-gray-400", billingToggle.checked);
     yearlyText.classList.toggle("text-gray-400", !billingToggle.checked);
     monthlyText.classList.toggle("text-blue-950", !billingToggle.checked);
-    yearlyText.classList.toggle("text-blue-950", billingToggle.checked);
     totalText.innerText = billingToggle.checked ? "per year" : "per month";
     spanText.innerText = billingToggle.checked ? "Yearly" : "Monthly";
 
